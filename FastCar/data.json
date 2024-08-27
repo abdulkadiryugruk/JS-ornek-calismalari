@@ -1,0 +1,20 @@
+[
+    {
+        "BMW":{
+        "baslangic":"1500",
+        "yuzKM":"300"
+    }
+    },
+    {
+        "honda":{
+        "baslangic":"1250",
+        "yuzKM":"250"
+    }
+    },
+    {
+        "Dacia":{
+        "baslangic":"1000",
+        "yuzKM":"200"
+    }
+    }
+]

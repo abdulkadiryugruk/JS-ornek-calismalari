@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FastCar</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row col-md">
+        <h1 class="text-center">FastCar</h1>
+      </div>
+      <hr />
+      <div class="row mt-5 col-md">
+        <h3 class="text-center">Kayit</h3>
+      </div>
+      <hr />
+      <div class="row">
+        <div class="col-md-3">
+          <input
+            class="form-control"
+            type="text"
+            placeholder="Ad-Soyad"
+            id="kayitAdsoyad"
+            required
+          />
+        </div>
+        <div class="col-md-3">
+          <input
+            class="form-control"
+            type="email"
+            placeholder="e-mail"
+            id="kayitMail"
+            required
+          />
+        </div>
+        <div class="col-md-3">
+          <input
+            class="form-control number"
+            type="tel"
+            placeholder="telefon"
+            id="kayitTel"
+            maxlength="10"
+            minlength="10"
+            pattern="\d*"
+            required
+          />
+        </div>
+        <div class="col-md-2">
+          <input
+            class="form-control"
+            placeholder="Arac Seciniz"
+            list="Araclar"
+            id="kayitArac"
+            required
+          />
+          <datalist id="Araclar">
+            <option value="BMW"></option>
+            <option value="Honda"></option>
+            <option value="Dacia"></option>
+          </datalist>
+        </div>
+        <div class="col-md-1">
+          <button class="btn btn-primary" id="btnEkle">Ekle</button>
+        </div>
+      </div>
+      <div class="mt-5 row text-center">
+        <h3>Kullanicilar</h3>
+      </div>
+      <hr />
+      <div class="row">
+        <table class="table table-bordered text-center">
+          <thead class="thead-light">
+            <tr>
+              <th class="col">Ad-Soyad</th>
+              <th class="col">E-Mail</th>
+              <th class="col">Telefon</th>
+              <th class="col">Arac</th>
+              <th class="col">islemler</th>
+            </tr>
+          </thead>
+          <tbody id="tablo">
+            <tr id="tr">
+              <!-- <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>
+                <button id="btnDuzenle" class="btn btn-warning btn-sm">
+                  Duzenle
+                </button>
+                <button id="btnBitir" class="btn btn-success btn-sm">
+                  Bitir
+                </button>
+              </td> -->
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="mt-5 row text-center">
+        <h3>KM bilgileri</h3>
+      </div>
+      <hr />
+      <div class="row">
+        <table class="table table-bordered text-center">
+          <thead class="thead-light">
+            <tr>
+              <th class="col">Ad-Soyad</th>
+              <th class="col">E-Mail</th>
+              <th class="col">Telefon</th>
+              <th class="col">Arac</th>
+              <th class="col">KM</th>
+              <th class="col">islemler</th>
+            </tr>
+          </thead>
+          <tbody id="tablo2">
+            <tr id="tr2">
+              <!-- <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>
+                <input
+                  id="odemeKM"
+                  class="form-control"
+                  style="width: 100px"
+                  type="number"
+                  placeholder="KM giriniz"
+                />
+              </td>
+              <td>
+                <button id="btnOnayla" class="btn btn-success btn-sm">
+                  ONAYLA
+                </button>
+              </td> -->
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="row mt-5"><h1 class="text-center">TOPLAM UCRET</h1></div>
+      <div class="row text-center d-flex justify-content-center"><div id="ucret" class="col-md-3 bg-warning text-white"></div></div>
+      <!-- <div class="row text-center"> 
+      <button class=" btn btn-success col-md-2">Alindi</button>
+    </div> -->
+    </div>
+    <div class="mt-5 row text-center">
+      <h3>Gerceklesen Islemler</h3>
+    </div>
+    <hr />
+    <div class="row">
+      <table class="table table-bordered text-center">
+        <thead class="thead-light">
+          <tr>
+            <th class="col">Ad-Soyad</th>
+            <th class="col">E-Mail</th>
+            <th class="col">Telefon</th>
+            <th class="col">Arac</th>
+            <th class="col">KM</th>
+            <th class="col">Ucret</th>
+            <th class="col">islemler</th>
+          </tr>
+        </thead>
+        <tbody id="tablo3">
+         
+        </tbody>
+      </table>
+    </div>
+
+    <div class="row mt-5"><h1 class="text-center">GUNLUK KAZANC</h1></div>
+      <div class="row text-center d-flex justify-content-center"><div id="toplamCiro" class="col-md-3 bg-warning text-white mb-5"></div></div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
